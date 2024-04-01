@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/jpg" href="files/favicon.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Chat Client</title>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <button onmousedown="changeName()">Change Name</button>
+  <div id="messages"></div>
+  <textarea type="text" id="message"></textarea>
+  <button class="send" onclick="sendMessage()">Send</button>
+  <script src="script.js"></script>
+</body>
+</html>
