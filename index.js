@@ -28,3 +28,8 @@ const port = process.env.PORT || 3000;
 http.listen(port, () => {
   console.log(`Server listening on http://localhost:${port}`);
 });
+
+// Vercel compatibility
+app.get('*', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html');
+});
