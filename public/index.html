@@ -19,6 +19,8 @@
 </head>
 <body>
   <button onmousedown="changeName()">Change Name</button>
+  <button onmousedown="resetChats()">Delete History</button>
+  <button class="title">Fanum Chat</button>
   <div id="messages"></div>
   <textarea type="text" id="message"></textarea>
   <button class="send" onclick="sendMessage()">Send</button>
@@ -44,6 +46,11 @@ const socket = io();
 if(localStorage.getItem('chatLog') != null){
   document.getElementById('messages').innerHTML = localStorage.getItem('chatLog');
 }
+
+  function resetChats() {
+    localStorage.removeItem('chatLog');
+    window.location.reload();
+  }
 
 function sendMessage() {
   const messageInput = document.getElementById('message');
@@ -195,11 +202,18 @@ textarea {
 }
 
 button {
+  cursor: pointer;
   margin-left: 2px;
   background: none;
   border: none;
   font-family: "Pixelify Sans", sans-serif;
 }
+
+    .title {
+      cursor: default;
+      float: right;
+      font-weight: bold;
+    }
   </style>
 </body>
 </html>
