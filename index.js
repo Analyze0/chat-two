@@ -9,7 +9,7 @@ io.on('connection', (socket) => {
   console.log('A user connected');
 
   // Send a message when a user connects
-  io.emit('chat message', '<span style='color:#D37676'> - A user has connected.</span>');
+  io.emit('chat message', "<span style='color:#D37676'> - A user has connected.</span>");
 
   socket.on('chat message', (msg) => {
     console.log('Message:', msg);
@@ -20,7 +20,7 @@ io.on('connection', (socket) => {
     console.log('A user disconnected');
 
     // Send a message when a user disconnects
-    io.emit('chat message', '<span style='color:#FF8080'> - A user has disconnected.</span>');
+    io.emit('chat message', "<span style='color:#FF8080'> - A user has disconnected.</span>");
   });
 });
 
