@@ -4,7 +4,7 @@
   <link rel="icon" type="image/jpg" href="files/favicon.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chat Client</title>
-  <script src="http://localhost:8000/socket.io/socket.io.js"></script>
+  <script>window.io || document.write('<script src="https://cdn.socket.io/4.0.1/socket.io.min.js"><\/script>')</script>
 </head>
 <body>
   <button onmousedown="changeName()">Change Name</button>
