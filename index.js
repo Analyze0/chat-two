@@ -9,7 +9,7 @@ io.on('connection', (socket) => {
   console.log('A user connected');
 
   // Send a message when a user connects
-  io.emit('chat message', "<span style='color:#D37676'> - A user has connected.</span>");
+  io.emit('chat message', "<span style='color:#A5DD9B'> - A user has connected.</span>");
 
   socket.on('chat message', (msg) => {
     console.log('Message:', msg);
