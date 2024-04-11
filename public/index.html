@@ -77,7 +77,6 @@ function sendMessage() {
     if (message.includes("# ")) {
       message = message.replaceAll("# ", "<h1> ");
     }
-    message = message.replaceAll("fuck", "****").replaceAll("dick", "****").replaceAll("bitch", "*****").replaceAll("cunt", "****").replaceAll("slut", "****").replaceAll("shit", "****").replaceAll(" ass", " ***").replaceAll("bastard", "*******").replaceAll("cum", "***").replaceAll("balls", "*****").replaceAll("jizz", "****");
     while (message.includes("**")) {
       message = message.replace("**", "<strong>");
       if (message.includes("**")) {
@@ -114,6 +113,7 @@ function sendMessage() {
     if(name.includes("balls")){
       message = "<span style='color:#BBABD6'>" + message + "</span>";
     }
+    message = message.replaceAll(/fuck/ig, "****").replaceAll(/dick/ig, "****").replaceAll(/bitch/ig, "*****").replaceAll(/cunt/ig, "****").replaceAll(/slut/ig, "****").replaceAll(/shit/ig, "****").replaceAll(/ ass/ig, " ***").replaceAll(/bastard/ig, "*******").replaceAll(/cum/ig, "***").replaceAll(/balls/ig, "*****").replaceAll(/jizz/ig, "****").replaceAll(/kys/ig, "***").replaceAll(/whore/ig, "*****").replaceAll(/twink/ig, "*****");
 
     message = "<div id='msgHolder'>" + message + "</div>";
     socket.emit('chat message', message);
