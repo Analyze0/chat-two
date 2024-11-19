@@ -141,6 +141,8 @@ function deleteChats() {
   window.location.reload();
 }
 
+
+
 socket.on('chat message', (msg) => {
   const messagesContainer = document.getElementById('messages');
   const messageElement = document.createElement('div');
@@ -148,6 +150,10 @@ socket.on('chat message', (msg) => {
   messagesContainer.appendChild(messageElement);
   notifSound.play();
   messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+  setTimeout(function(){
+    alert('test');
+  },2000);
 });
 
 document.getElementById("message").onkeydown = function(e){
